@@ -11,7 +11,7 @@ class Message(client.Cog):
     @client.Cog.listener()
     async def on_message(self, message):
         
-        if re.search(r"(Nigga|Nigger|Faggot|Shemale|Tranny|Vomit)", message.content, re.IGNORECASE):
+        if re.search(r"(Nigga|Nigger|Faggot|Shemale|Tranny|Vomit|N1gga)", message.content, re.IGNORECASE):
             await message.delete()
             censor = discord.Embed(
                 title = '**You have been warned**',
