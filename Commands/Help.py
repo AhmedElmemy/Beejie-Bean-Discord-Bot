@@ -20,17 +20,23 @@ class Help(client.Cog):
         embed.add_field(name="b_face", value="Sends a random face picture.", inline=True)
         embed.add_field(name="b_psize", value="Shows your Penis's size. 😜", inline=True)
         embed.add_field(name="b_hug @Member", value="Hugs the selected user.", inline=True)
+        embed.add_field(name="b_punch @Member", value="Punch the selected user.", inline=True)
         embed.add_field(name="b_headpat @Member", value="Gives the selected user a headpat.", inline=True)
         embed.add_field(name="b_ping", value="Checks the host server ping speed.", inline=True)
         embed.add_field(name="b_help", value="Shows this list", inline=True)
-        embed.add_field(name="b_IQ", value="Shows your IQ. ||Baka brain smh.||", inline=True)
+        embed.add_field(name="b_IQ", value="Shows your IQ. ***Baka brain smh.***", inline=True)
         embed.add_field(name="b_test", value="Checks if I'm working or not.", inline=True)
+        embed.add_field(name="b_userinfo @Member", value="Sends an long detailed message of a member's info", inline=True)
+        embed.add_field(name="b_cat", value="Sends a random cat picture.", inline=True)
+        embed.add_field(name="b_dog", value="Sends a random doggo picture.", inline=True)
+        embed.add_field(name="b_bored", value="You're bored? Maybe I'll find something for you to do.", inline=True)
+        embed.add_field(name="b_joke", value="Sends a random joke!", inline=True)
         
         
         
         
-        embed.add_field(name="and that's it!", value="I'm sure there will be more commands added as soon as possible, so stay tuned until then. ||Beejie bot: Version 2.8||")
-        embed.set_footer(text="Invite Your Friends To Beejie's!: https://discord.gg/uyy6D9T")
+        embed.add_field(name="and that's it!", value="I'm sure there will be more commands added as soon as possible, so stay tuned until then. **Beejie bot: Version 3.1**")
+        embed.set_footer(text="Invite Your Friends To Beejie's!")
         await ctx.send(embed=embed)
 
 def setup(bot):
