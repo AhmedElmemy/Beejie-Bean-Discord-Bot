@@ -1,0 +1,37 @@
+import discord, re
+import discord.ext.commands as client
+from discord.ext.commands.cooldowns import BucketType
+
+
+class Message(client.Cog):
+    def __init__(self, bot):
+
+        self.bot = bot
+
+    @client.Cog.listener()
+    async def on_message_delete(self, message):
+      
+     if message.author == self.bot.user:
+        return
+     else:
+        if message.guild == None:
+           return
+        logchannel = self.bot.get_channel(739582644899020930)
+        header = "`A Message Was Deleted From: {0}, {1}#{2} In Channel: #{3}`\n".format(message.author.id, message.author.name, message.author.discriminator,message.channel.name)
+        if len(message.clean_content) > 1800:
+          returnmessage = "Capped:\n" + rf.cap(message, 180)
+        elif len(message.clean_content) == 0:
+            returnmessage = "--Empty--"
+        else:
+              returnmessage = message.clean_content
+        if len(message.attachments) > 0:
+                fullmessage = header + "```\n" + returnmessage + "```"
+                fullmessage += "With {0} attachment(s):\n".format(len(message.attachments))
+                for i in msg.attachments:
+                  fullmessage += "`" + i.url + "`\n"
+        else:
+                    fullmessage = header + "```\n" + returnmessage + "```"
+                    await logchannel.send(fullmessage)
+
+def setup(bot):
+    bot.add_cog(Message(bot))
