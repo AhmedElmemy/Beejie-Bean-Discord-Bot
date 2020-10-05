@@ -18,6 +18,9 @@ class Staffhelp(client.Cog):
         embed.add_field(name="b_kick @User (reason)", value="Kicks the selected user from the server. Example: `b_kick @member being annoying` and the reason will be saved in the audit log", inline=True)
         embed.add_field(name="b_ban @User (reason)", value="Bans the selected user from the server. Example: `b_ban @member being aggressive` and the reason will be saved in the audit log", inline=True)
         embed.add_field(name="b_dm (user ID) (message)", value="Sends a message to selected user with bot Example: `b_dm 5716272819171616 Please be more respectful to other members... Thank you.` and the message will be sent", inline=True)
+        embed.add_field(name="b_userinfo (user ID)", value="Sends a long detailed information about the user like when did they join and when they made their account, Example: `b_userinfo 57162721625272816` and the message will be displayed.", inline=True)
+        embed.add_field(name="b_repeat (message)", value="Makes me repeat your message in the same channel you used the command in.", inline=True)
+        embed.add_field(name="b_say (message)", value="Makes me repeat your message but only in the <#271888640936902656> channel.", inline=True)
 
         embed.add_field(name="Notes:", value="These commands will work for the staff members only (Flayers) and it won\'t work with any other member so you must have the flayer role or higher in order to use these commands. To get a user's ID you must make sure you have the developer mode enabled from your setting on discord if you have it enabled than simply open a user\'s profile, scroll down, then click \"Copy ID\" you will need it to for a few commands like the DM and the Warn command but it's useful since it sends the user/member the message without pinging them and it can be used in the mod/admin chat so you should know about it")
         await ctx.send(embed=embed)
