@@ -1,0 +1,18 @@
+import discord
+import discord.ext.commands as client
+from discord.ext.commands.cooldowns import BucketType
+
+class Ready(client.Cog):
+
+    def __init__(self, bot):
+
+        self.bot = bot
+
+    @client.Cog.listener()
+    async def on_member_join(self, member):
+    
+        channel=self.bot.get_channel(731461766411845652)
+        await channel.send(f"{member.name} Joined the server, their account was created on {member.created_at.strftime('%a,%d %B %Y,%I:%M,UTC')}")
+
+def setup(bot):
+    bot.add_cog(Ready(bot))
