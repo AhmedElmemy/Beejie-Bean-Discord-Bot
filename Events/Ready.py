@@ -20,10 +20,19 @@ class Ready(client.Cog):
     async def status_task(self):
         while not self.bot.is_closed():
             games = [
-                "with lemon cakes",
-                "with Larson",
+              
+                "on Larson's grave",
                 "Doki Doki Literature Club",
-                "while flaying", "Toaru Majutsu No Index MMO", "with flaying knifes", "Minecraft", "Anime", "Type b_help for the commands list", "Left 4 Dead 2"
+                "while flaying", "Toaru Majutsu No Index MMO", "with flaying knifes", "Minecraft", "Anime", "Type b_help for the commands list", "Left 4 Dead 2",
+                "with Celty",
+                "Mr burns is gay",
+                "I said ride on",
+                "Do people even read these?",
+                "with Ryanna",
+                "Mikoto is best girl fite me",
+                "Penisfart",
+                "Penisfart?",
+                "🇵 🇪 🇳 🇮 🇸 🇫 🇦 🇷 🇹"
             ]
             for game in games:
                 await self.bot.change_presence(activity=discord.Game(game))
